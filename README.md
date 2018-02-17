@@ -48,7 +48,6 @@ rm $PREPROCESSED
 ## Known issues
 
 * All words are converted to lowercase.
-* Using gpu and/or mini-batches is not supported at test time.
 
 
 ## References
