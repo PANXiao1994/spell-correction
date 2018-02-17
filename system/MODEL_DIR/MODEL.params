@@ -1,0 +1,6 @@
+model_file	MODEL
+words_file	WORD_EMBEDDINGS.targets
+unit	300
+deep	yes
+drop_ratio	0.0
+#	/Users/panxiao/anaconda3/envs/TD_1/lib/python2.7/site-packages/context2vec//train/train_context2vec.py -i test.txt.DIR -w WORD_EMBEDDINGS -m MODEL -c lstm --deep yes -t 3 --dropout 0.0 -u 300 -e 20 -p 0.75 -b 100
