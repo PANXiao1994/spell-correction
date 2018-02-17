@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CONTEXT2VECDIR="MODEL_DIR/MODEL.params"
+CONTEXT2VECDIR="context2vec.mscc.model.package/context2vec.mscc.model.params"
 DICTDIR="dictionary/words_alpha.txt"
 PREPROCESSED="result/preprocess1.txt"
 
