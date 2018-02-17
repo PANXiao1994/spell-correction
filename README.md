@@ -23,6 +23,12 @@ if mode = 'random': choose randomly
 	- if state = 'auto': the candidate with the largest similarity will be selected automatically
 * [output_file_name]: The file name of the output of result. The file will be stored directly in the ./output/ repository
 
+### Example
+```
+sh run_system.sh ./corpus/CorpusBataclan_en.1M.raw.txt 3 51 auto output
+```
+This will normalize the line 51 to 53(included) in the file "./corpus/CorpusBataclan_en.1M.raw.txt", the corrected words are selected automatically, the result will be stored in "./result/output.txt"
+
 ## run_system.sh
 
 ```
