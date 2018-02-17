@@ -1,6 +1,6 @@
 # text-normalization
 
-* A system that allows automaticly text normalization
+* A system that allows automatical text normalization
 
 ## Requirements
 For running successfully this system, you need both python 2.7 and python 3.6 on your machine.
