@@ -5,6 +5,10 @@
 ## Requirements
 For running successfully this system, you need both python 2.7 and python 3.6 on your machine.
 
+For running "preprocess.py", you need install [[ekphrasis]](https://github.com/cbaziotis/ekphrasis) in the python 3.6 envoronment.
+
+For running "system.py", you need install [[context2vec]](https://github.com/orenmel/context2vec) in the python 2.7 environment.
+
 ## Quick-start
 First, enter the subfolder named "system", then open the terminal, run the command below:
 
@@ -41,7 +45,7 @@ PREPROCESSED="result/preprocess1.txt"
 echo "Preprocessing ... ..."
 python3 ./commands/preprocess.py $1 $2 $3 $PREPROCESSED
 
-python ./commands/system.py $PREPROCESSED $CONTEXT2VECDIR $DICTDIR $4 $5
+python2 ./commands/system.py $PREPROCESSED $CONTEXT2VECDIR $DICTDIR $4 $5
 
 rm $PREPROCESSED
 ```
