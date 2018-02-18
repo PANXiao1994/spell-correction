@@ -116,7 +116,7 @@ def main(input_path):
     if OUTPUT != '-1':
         thefile = open('result/'+OUTPUT+'.txt', 'w')  
     for i,line in enumerate(lines):
-        print "\n-------Sentence %d:------\n"%i, line
+        print "\n-------Sentence %d:------\n"%(i+1), line
         print ">> Extracting the words to be corrected ... ..."
         sent, target_pos = parse_input(line)
         print ">> The following positions are not correct:"
@@ -130,7 +130,7 @@ def main(input_path):
             print "\n=====The corrected sentences:====="
             print l, '\n'
         else:
-            thefile.write("%s" % l.encode('utf-8'))
+            thefile.write("%s\n" % l.encode('utf-8'))
             
 def auto_corr(sent, target_pos):
     """
@@ -195,15 +195,20 @@ def auto_corr(sent, target_pos):
             
         if STATE == 'manual':
             print "Time: %.2fs"%(time.time()-t0)
-            print "Please choose the replacement, enter the number of the candidate:"
+            print "Please choose the replacement, enter the number of the candidate: (Enter 0 for no replacement)"
             choice = six.moves.input('>> ')
-            idx = l[int(choice) - 1]
+            c = int(choice)
+            if c == 0:
+                continue # no change made
+            elif c > 0:
+                idx = l[c - 1]
+            else:
+                raise Exception("Invalid input!")   
         elif STATE == 'auto':
             idx = l[0]
-
-
-
         corr_word = index2word[idx]
+
+        
         print ">>>> \t", old_word, "\t--->\t", corr_word
         sent[pos] = corr_word
     return sent
