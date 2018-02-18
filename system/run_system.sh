@@ -7,6 +7,6 @@ PREPROCESSED="result/preprocess1.txt"
 echo "Preprocessing ... ..."
 python3 ./commands/preprocess.py $1 $2 $3 $PREPROCESSED
 
-python ./commands/system.py $PREPROCESSED $CONTEXT2VECDIR $DICTDIR $4 $5
+python2 ./commands/system.py $PREPROCESSED $CONTEXT2VECDIR $DICTDIR $4 $5
 
 rm $PREPROCESSED
