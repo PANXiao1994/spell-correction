@@ -9,6 +9,10 @@ For running "preprocess.py", you need install [[ekphrasis]](https://github.com/c
 
 For running "system.py", you need install [[context2vec]](https://github.com/orenmel/context2vec) in the python 2.7 environment.
 
+* You can also ignore the preprocess part, which means you need to skip the preprocess.py part in the run_system.sh.
+
+	* Your input file should be named result/preprocess1.txt. And all lines in your input file will be normalized.
+
 ## Quick-start
 First, enter the subfolder named "system", then open the terminal, run the command below:
 
@@ -49,7 +53,9 @@ python2 ./commands/system.py $PREPROCESSED $CONTEXT2VECDIR $DICTDIR $4 $5
 
 rm $PREPROCESSED
 ```
-* The variable $CONTEXT2VECDIR is the trained context2vec model. The model provided in the repository is a tiny test one, for better performance, download pre-trained context2vec models from [[here]](http://u.cs.biu.ac.il/~nlp/resources/downloads/context2vec/) and unzip the model under the folder [system].
+* The variable $CONTEXT2VECDIR is the trained context2vec model. 
+
+* Attention! The model provided in the repository is a tiny demo one, so the performance is poor. For better performance, download pre-trained context2vec models from [[here]](http://u.cs.biu.ac.il/~nlp/resources/downloads/context2vec/) and unzip the model under the system folder.
 
 * The variable $DICTDIR is the dictionay file. You can use other dictionary
 
